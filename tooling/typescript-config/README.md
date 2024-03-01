@@ -1,0 +1,3 @@
+# @terratritium/typescript-config
+
+TBD

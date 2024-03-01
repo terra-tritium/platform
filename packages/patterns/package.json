@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "@terratritium/patterns",
+  "version": "0.0.0",
+  "private": true,
+  "license": "COPYRIGHT",
+  "main": "./src/index.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "tailwindcss": "~3.4.1",
+    "typescript": "~5.4.2"
+  },
+  "devDependencies": {
+    "@terratritium/typescript-config": "workspace:*"
+  }
+}

@@ -1,0 +1,73 @@
+@import url('@terratritium/ui/styles.css');
+
+/* @keyframes spin-forward{
+  0% {
+    transform:rotate(0deg)
+  }
+  to {
+    transform:rotate(1turn)
+  }
+}
+
+.animate-spin-forward-slow {
+  animation: spin-forward 8s linear infinite
+}
+
+@keyframes spin-reverse {
+  0% {
+    transform: rotate(0)
+  }
+  to {
+    transform: rotate(-1turn)
+  }
+}
+
+.animate-spin-reverse-slower{
+  animation: spin-reverse 10s linear infinite
+} */
+
+.bg-radial-gradient {
+  background-image: radial-gradient(var(--tw-gradient-stops));
+}
+
+.skew,
+.skew-left,
+.skew-right {
+  @apply relative;
+}
+
+.skew {
+  @apply border-0;
+}
+
+.skew-left {
+  @apply rounded-l-none border-l-0 pl-4;
+}
+
+.skew-right {
+  @apply rounded-r-none border-r-0 pr-4;
+}
+
+.skew::before,
+.skew-left::before,
+.skew-right::before {
+  @apply border border-inherit -top-px -bottom-px bg-inherit -z-10;
+}
+
+.skew::before {
+  @apply absolute rounded-sm -left-2 -right-2 -skew-x-14;
+
+  content: "";
+}
+
+.skew-left::before {
+  @apply absolute border-r-0 rounded-l-sm -left-1 right-1 origin-top-left -skew-x-14;
+
+  content: "";
+}
+
+.skew-right::before {
+  @apply absolute border-l-0 rounded-r-sm left-1 -right-1 origin-bottom-right -skew-x-14;
+
+  content: "";
+}
