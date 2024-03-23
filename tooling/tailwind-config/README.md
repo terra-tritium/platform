@@ -1,3 +1,3 @@
-# @acme/tailwind-config
+# @terratritium/tailwind-config
 
 TBD

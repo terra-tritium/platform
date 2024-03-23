@@ -1,3 +1,3 @@
-# @acme/typescript-config
+# @terratritium/typescript-config
 
 TBD

@@ -1,7 +1,7 @@
 import type { JSX } from 'react'
 import Link from 'next/link'
 
-import { Button, typographyVariants, Icon } from '@acme/ui'
+import { Button, typographyVariants, Icon } from '@terratritium/ui'
 
 import { UserRegisterForm } from './components'
 

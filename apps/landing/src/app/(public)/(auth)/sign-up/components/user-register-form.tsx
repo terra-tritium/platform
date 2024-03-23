@@ -28,7 +28,7 @@ import {
   Button,
   Icon,
   toast,
-} from '@acme/ui'
+} from '@terratritium/ui'
 
 import { signUpSchema } from '@/schemas'
 import { api } from '@/lib/api'

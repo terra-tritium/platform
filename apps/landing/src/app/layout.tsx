@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import type { ReactNode, JSX } from 'react'
 
-import { TailwindIndicator } from '@acme/ui'
+import { TailwindIndicator } from '@terratritium/ui'
 
 import { fontSans } from '@/lib/fonts'
 import '@/styles/globals.css'

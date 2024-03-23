@@ -1,6 +1,6 @@
 import type { JSX } from 'react'
 
-import { cn } from '@acme/ui'
+import { cn } from '@terratritium/ui'
 
 const stars = [
   { className: 'bg-orange-800', style: { top: 443, left: 299 } },

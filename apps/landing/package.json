@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
-  "name": "@acme/landing",
+  "name": "@terratritium/landing",
   "version": "0.0.0",
   "private": true,
   "license": "COPYRIGHT",
@@ -12,7 +12,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@acme/ui": "workspace:~",
+    "@terratritium/ui": "workspace:~",
     "@hookform/resolvers": "^3.3.4",
     "@tanstack/react-query": "^5.28.6",
     "@tanstack/react-query-devtools": "^5.28.6",
@@ -25,7 +25,7 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
-    "@acme/typescript-config": "workspace:~",
+    "@terratritium/typescript-config": "workspace:~",
     "@types/node": "~20.11.30",
     "@types/react": "~18.2.67",
     "@types/react-dom": "~18.2.22",

@@ -1,7 +1,7 @@
 import type { ReactNode, JSX } from 'react'
 import Link from 'next/link'
 
-import { Logo } from '@acme/ui'
+import { Logo } from '@terratritium/ui'
 
 import { Orbit, Land } from '@/components'
 

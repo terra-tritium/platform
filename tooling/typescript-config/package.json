@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
-  "name": "@acme/typescript-config",
+  "name": "@terratritium/typescript-config",
   "version": "0.0.0",
   "private": true,
   "license": "COPYRIGHT",

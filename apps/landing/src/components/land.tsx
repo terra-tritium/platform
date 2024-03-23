@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import { Sprite } from '@acme/ui'
+import { Sprite } from '@terratritium/ui'
 
 export default function Land(): JSX.Element {
   return (

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": "@acme/typescript-config/nextjs.json",
+  "extends": "@terratritium/typescript-config/nextjs.json",
   "compilerOptions": {
     "plugins": [
       {

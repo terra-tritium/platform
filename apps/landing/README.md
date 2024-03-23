@@ -1,3 +1,3 @@
-# @acme/landing
+# @terratritium/landing
 
 TBD

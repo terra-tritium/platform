@@ -1,7 +1,7 @@
 import type { JSX } from 'react'
 import Link from 'next/link'
 
-import { typographyVariants, Input, Button, Icon } from '@acme/ui'
+import { typographyVariants, Input, Button, Icon } from '@terratritium/ui'
 
 export default function SignInPage(): JSX.Element {
   return (

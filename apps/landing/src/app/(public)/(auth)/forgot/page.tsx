@@ -1,7 +1,7 @@
 import type { JSX } from 'react'
 import Link from 'next/link'
 
-import { Input, Button, typographyVariants, Icon } from '@acme/ui'
+import { Input, Button, typographyVariants, Icon } from '@terratritium/ui'
 
 export default function SignUpPage(): JSX.Element {
   return (

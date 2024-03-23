@@ -2,7 +2,7 @@
 
 import type { ComponentProps } from 'react'
 
-import { Toaster } from '@acme/ui'
+import { Toaster } from '@terratritium/ui'
 
 type ToasterProviderProps = ComponentProps<typeof Toaster>
 

@@ -2,7 +2,7 @@
  * @type { import('next').NextConfig }
  */
 const nextConfig = {
-  transpilePackages: ['@acme/ui'],
+  transpilePackages: ['@terratritium/ui'],
 }
 
 export default nextConfig

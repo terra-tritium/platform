@@ -1,4 +1,4 @@
-import tailwindPreset, { type Config } from '@acme/ui/tailwind.config'
+import tailwindPreset, { type Config } from '@terratritium/ui/tailwind.config'
 
 export default {
   presets: [tailwindPreset],

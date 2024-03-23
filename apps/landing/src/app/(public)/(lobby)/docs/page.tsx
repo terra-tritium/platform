@@ -1,6 +1,6 @@
 import type { JSX } from 'react'
 
-import { typographyVariants } from '@acme/ui'
+import { typographyVariants } from '@terratritium/ui'
 
 import tailwindConfig from '../../../../../tailwind.config'
 

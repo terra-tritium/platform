@@ -1,6 +1,6 @@
 import animatePlugin from 'tailwindcss-animate'
 
-import tailwindPreset, { type Config } from '@acme/tailwind-config'
+import tailwindPreset, { type Config } from '@terratritium/tailwind-config'
 
 export type { Config }
 

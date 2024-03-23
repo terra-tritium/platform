@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": "@acme/typescript-config/react-library.json",
+  "extends": "@terratritium/typescript-config/react-library.json",
   "compilerOptions": {
     "outDir": "dist"
   },
