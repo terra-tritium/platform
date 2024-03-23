@@ -11,5 +11,5 @@
 bun install
 
 # Start the development server
-bunx turbo dev --filter join
+bunx turbo dev --filter landing
 ```

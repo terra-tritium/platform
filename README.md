@@ -1,4 +1,4 @@
-# Join Proposal
+# Landing Proposal
 
 TODO
 
