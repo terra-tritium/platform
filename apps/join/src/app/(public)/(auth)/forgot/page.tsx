@@ -25,7 +25,7 @@ export default function SignUpPage(): JSX.Element {
       <div className='mt-8' />
 
       <div className='relative'>
-        <div className='absolute -inset-px rounded-xl bg-gradient-to-r from-purple-500 via-fuchsia-600 to-orange-600 opacity-70 blur-lg -z-10' />
+        <div className='absolute -inset-px rounded-xl bg-gradient-to-r from-indigo-500 to-teal-700 opacity-70 blur-lg -z-10' />
 
         <Button className='w-full' size='lg' type='submit'>
           <span>Continue</span>

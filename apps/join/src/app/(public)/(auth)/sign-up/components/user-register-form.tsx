@@ -240,7 +240,7 @@ export default function UserRegisterForm({
 
         <div className='relative'>
           {formState.isValid ? (
-            <div className='absolute -inset-px rounded-xl bg-gradient-to-r from-purple-500 via-fuchsia-600 to-orange-600 opacity-70 blur-lg -z-10' />
+            <div className='absolute -inset-px rounded-xl bg-gradient-to-r from-indigo-500 to-teal-700 opacity-70 blur-lg -z-10' />
           ) : null}
 
           <Button

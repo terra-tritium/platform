@@ -1,4 +1,5 @@
 import type { ReactNode, JSX } from 'react'
+import Link from 'next/link'
 
 import { Logo } from '@acme/ui'
 
@@ -15,11 +16,7 @@ export default function PublicLayout({
   return (
     <main className='flex flex-col h-screen'>
       <section className='container relative pt-8 md:pt-12 flex-1'>
-        <header className='flex justify-center'>
-          <Logo.terraTritium className='h-12' />
-        </header>
-
-        <div className='max-md:hidden bg-radial-gradient absolute aspect-video -top-20 w-full blur-3xl opacity-40 mix-blend-hard-light max-lg:hidden' />
+        <div className='max-md:hidden bg-radial-gradient absolute aspect-video -top-20 w-full blur-3xl opacity-40 mix-blend-hard-light max-lg:hidden -z-10' />
 
         <img
           alt='Orbit'
@@ -30,6 +27,10 @@ export default function PublicLayout({
         <div className='relative max-md:hidden left-1/2 w-full max-w-7xl -translate-x-1/2 -z-10'>
           <Stars />
         </div>
+
+        <Link className='flex justify-center' href='/'>
+          <Logo.terraTritium className='h-12' />
+        </Link>
 
         <div className='my-12 md:my-24 z-10'>{children}</div>
       </section>
