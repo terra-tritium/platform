@@ -2,7 +2,7 @@ import type { JSX } from 'react'
 
 import { typographyVariants } from '@acme/ui'
 
-import tailwindConfig from '../../../../tailwind.config'
+import tailwindConfig from '../../../../../tailwind.config'
 
 export default function DocsPage(): JSX.Element {
   const { indigo, teal } = tailwindConfig.theme.extend.colors

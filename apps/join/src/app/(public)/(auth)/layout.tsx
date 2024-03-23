@@ -3,8 +3,7 @@ import Link from 'next/link'
 
 import { Logo } from '@acme/ui'
 
-import Stars from '@/components/stars'
-import Footer from '@/components/footer'
+import { Orbit, Land } from '@/components'
 
 interface PublicLayoutProps {
   children: ReactNode
@@ -16,17 +15,7 @@ export default function PublicLayout({
   return (
     <main className='flex flex-col h-screen'>
       <section className='container relative pt-8 md:pt-12 flex-1'>
-        <div className='max-md:hidden bg-radial-gradient absolute aspect-video -top-20 w-full blur-3xl opacity-40 mix-blend-hard-light max-lg:hidden -z-10' />
-
-        <img
-          alt='Orbit'
-          className='absolute max-md:hidden top-40 left-1/2 -translate-x-1/2 -z-20'
-          src='/static/img/orbit.svg'
-        />
-
-        <div className='relative max-md:hidden left-1/2 w-full max-w-7xl -translate-x-1/2 -z-10'>
-          <Stars />
-        </div>
+        <Orbit />
 
         <Link className='flex justify-center' href='/'>
           <Logo.terraTritium className='h-12' />
@@ -35,7 +24,7 @@ export default function PublicLayout({
         <div className='my-12 md:my-24 z-10'>{children}</div>
       </section>
 
-      <Footer />
+      <Land />
     </main>
   )
 }
