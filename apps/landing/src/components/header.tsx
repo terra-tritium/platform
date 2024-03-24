@@ -1,7 +1,7 @@
 import type { JSX } from 'react'
 import Link from 'next/link'
 
-import { Logo } from '@terratritium/ui'
+import { Logo, typographyVariants } from '@terratritium/ui'
 
 import { Orbit } from '@/components'
 import { mainMenu, socialMenu } from '@/data'
@@ -12,10 +12,15 @@ export default function Header(): JSX.Element {
       <Orbit className='container' />
 
       <header className='container grid grid-cols-[1fr_248px_1fr] pt-8 md:pt-12'>
-        <nav className='flex gap-x-4 items-center font-medium'>
+        <nav
+          className={typographyVariants({
+            className: 'flex gap-x-4 items-center font-medium',
+            variant: 'muted',
+          })}
+        >
           {mainMenu.map(({ href, title }, index) => (
             // biome-ignore lint/suspicious/noArrayIndexKey: This is a static list
-            <Link key={index} href={href}>
+            <Link className='hover:text-white' key={index} href={href}>
               {title}
             </Link>
           ))}

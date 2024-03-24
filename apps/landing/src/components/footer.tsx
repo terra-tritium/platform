@@ -33,7 +33,7 @@ export default function Footer(): JSX.Element {
                     <li key={index}>
                       <Link
                         className={cn(
-                          'flex group',
+                          'flex group hover:text-white',
                           icon ? 'items-center space-x-1' : null,
                         )}
                         href={href}
@@ -63,10 +63,15 @@ export default function Footer(): JSX.Element {
 
         <div className='mt-16' />
 
-        <ul className='flex flex-wrap justify-center items-center gap-6'>
+        <ul
+          className={typographyVariants({
+            className: 'flex flex-wrap justify-center items-center gap-6',
+            variant: 'muted',
+          })}
+        >
           <li>
             <Link
-              className='flex gap-3 items-center'
+              className='flex gap-3 items-center text-white'
               href='/'
               rel='noopener noreferrer'
               target='_blank'
@@ -75,6 +80,7 @@ export default function Footer(): JSX.Element {
                 <span className='inline-flex absolute w-full h-full bg-green-400 rounded-full opacity-75 animate-ping' />
                 <span className='inline-flex relative w-2 h-2 bg-green-500 rounded-full' />
               </span>
+
               <span>Status</span>
             </Link>
           </li>
@@ -82,7 +88,12 @@ export default function Footer(): JSX.Element {
           {legalMenu.map(({ title, href }, index) => (
             // biome-ignore lint/suspicious/noArrayIndexKey: This is a static list
             <li key={index}>
-              <Link href={href} rel='noopener noreferrer' target='_blank'>
+              <Link
+                className='hover:text-white'
+                href={href}
+                rel='noopener noreferrer'
+                target='_blank'
+              >
                 {title}
               </Link>
             </li>
