@@ -1,7 +1,7 @@
 import type { JSX } from 'react'
 import Link from 'next/link'
 
-import { Logo, typographyVariants } from '@terratritium/ui'
+import { Logo, buttonVariants, typographyVariants } from '@terratritium/ui'
 
 import { Orbit } from '@/components'
 import { mainMenu, socialMenu } from '@/data'
@@ -31,20 +31,17 @@ export default function Header(): JSX.Element {
         </Link>
 
         <ul className='flex justify-end items-center space-x-4'>
-          {socialMenu.map(({ icon, href, title }, index) => {
-            const Icon = Logo[icon as keyof typeof Logo]
-
-            return (
-              // biome-ignore lint/suspicious/noArrayIndexKey: This is a static list
-              <li key={index}>
-                <Link href={href} rel='nofollow noopener' target='_blank'>
-                  <Icon className='w-6 h-6' />
-
-                  <span className='sr-only'>{title}</span>
-                </Link>
-              </li>
-            )
-          })}
+          <li>
+            <Link
+              className={buttonVariants({
+                className: '!rounded-full px-6',
+                variant: 'outline',
+              })}
+              href='/sign-up'
+            >
+              Play now
+            </Link>
+          </li>
         </ul>
       </header>
     </>

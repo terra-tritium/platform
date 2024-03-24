@@ -1,9 +1,9 @@
 import type { JSX } from 'react'
 import Link from 'next/link'
 
-import { typographyVariants, Icon, cn } from '@terratritium/ui'
+import { typographyVariants, Icon, cn, Logo } from '@terratritium/ui'
 
-import { footerMenu, legalMenu } from '@/data'
+import { footerMenu, socialMenu, legalMenu } from '@/data'
 
 import Land from './land'
 
@@ -60,6 +60,36 @@ export default function Footer(): JSX.Element {
             </div>
           ))}
         </div>
+
+        <div className='mt-16' />
+
+        <h3
+          className={typographyVariants({
+            className: 'text-sm text-center',
+            variant: 'muted',
+          })}
+        >
+          Follow us at
+        </h3>
+
+        <div className='mt-2' />
+
+        <ul className='flex justify-center space-x-4'>
+          {socialMenu.map(({ icon, href, title }, index) => {
+            const Icon = Logo[icon as keyof typeof Logo]
+
+            return (
+              // biome-ignore lint/suspicious/noArrayIndexKey: This is a static list
+              <li key={index}>
+                <Link href={href} rel='nofollow noopener' target='_blank'>
+                  <Icon className='w-8 h-8' />
+
+                  <span className='sr-only'>{title}</span>
+                </Link>
+              </li>
+            )
+          })}
+        </ul>
 
         <div className='mt-16' />
 
