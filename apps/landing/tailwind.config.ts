@@ -52,10 +52,19 @@ export default {
             transform: 'rotate(90deg)',
           },
         },
+        'infinite-scroll': {
+          from: {
+            transform: 'translateX(0)',
+          },
+          to: {
+            transform: 'translateX(-75%)',
+          },
+        },
       },
       animation: {
         flip: 'flip 6s infinite steps(2, end)',
         rotate: 'rotate 3s linear infinite both',
+        'infinite-scroll': 'infinite-scroll 180s linear infinite',
       },
     },
   },
