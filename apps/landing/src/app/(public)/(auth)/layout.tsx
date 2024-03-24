@@ -14,9 +14,9 @@ export default function PublicLayout({
 }: PublicLayoutProps): JSX.Element {
   return (
     <main className='flex flex-col h-screen'>
-      <section className='container relative pt-8 md:pt-12 flex-1'>
-        <Orbit />
+      <Orbit className='container' />
 
+      <section className='container relative pt-8 md:pt-12 flex-1'>
         <Link className='flex justify-center' href='/'>
           <Logo.terraTritium className='h-12' />
         </Link>

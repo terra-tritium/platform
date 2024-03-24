@@ -4,7 +4,6 @@ import type { ReactNode, JSX } from 'react'
 import { TailwindIndicator } from '@terratritium/ui'
 
 import { fontSans } from '@/lib/fonts'
-import MouseGradient from '@/components/mouse-gradient'
 import '@/styles/globals.css'
 
 import Providers from './providers'
@@ -24,7 +23,6 @@ export default function RootLayout({ children }: RootLayoutProps): JSX.Element {
       <body className={fontSans.className}>
         <Providers>{children}</Providers>
 
-        <MouseGradient />
         <TailwindIndicator env={process.env.NODE_ENV} />
       </body>
     </html>

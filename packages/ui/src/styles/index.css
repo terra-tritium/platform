@@ -33,8 +33,6 @@
     --ring: 240 4.9% 83.9%;
 
     --radius: 0.5rem;
-
-    --mouse-gradient-color: theme(colors.indigo.900);
   }
 }
 
@@ -44,6 +42,6 @@
   }
 
   body {
-    @apply bg-background text-foreground antialiased overflow-x-hidden;
+    @apply bg-background text-foreground antialiased;
   }
 }
