@@ -18,6 +18,7 @@
     "@tanstack/react-query-next-experimental": "~5.28.6",
     "@terratritium/ui": "workspace:~",
     "axios": "~1.6.8",
+    "framer-motion": "~11.0.20",
     "next": "14.1.4",
     "react": "~18.2.0",
     "react-dom": "~18.2.0",
