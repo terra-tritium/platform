@@ -55,6 +55,10 @@ export const footerMenu = [
         href: '/sustainability',
         icon: 'arrowUpRight',
       },
+      {
+        title: 'Team',
+        href: '/team',
+      },
     ],
   },
   {
