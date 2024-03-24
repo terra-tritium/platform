@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 import { Logo } from '@terratritium/ui'
 
-import { Orbit, Land } from '@/components'
+import { Orbit, Footer } from '@/components'
 
 interface LobbyLayoutProps {
   children: ReactNode
@@ -24,7 +24,7 @@ export default function LobbyLayout({
         <div className='my-12 md:my-24 z-10'>{children}</div>
       </section>
 
-      <Land />
+      <Footer />
     </main>
   )
 }

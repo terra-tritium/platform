@@ -4,7 +4,7 @@ import { Sprite } from '@terratritium/ui'
 
 export default function Land(): JSX.Element {
   return (
-    <div className='w-full h-40 max-md:hidden bg-gradient-to-r from-[#77528B] via-[#6D6BFB] to-[#77528B] relative mt-24 shrink-0'>
+    <div className='w-full h-40 bg-gradient-to-r from-[#77528B] via-[#6D6BFB] to-[#77528B] relative mt-56 shrink-0'>
       <Image
         alt='Hill'
         className='absolute top-4 -translate-y-full z-10'
@@ -14,12 +14,12 @@ export default function Land(): JSX.Element {
       />
 
       {/* <Image
-    alt='Hill'
-    className='absolute -top-64 left-32 max-xl:hidden -translate-y-full z-10'
-    src='/static/img/footer/ship.svg'
-    width={204}
-    height={116}
-  /> */}
+        alt='Hill'
+        className='absolute -top-64 left-32 max-xl:hidden -translate-y-full z-10'
+        src='/static/img/footer/ship.svg'
+        width={204}
+        height={116}
+      /> */}
 
       <Image
         alt='Hill'
@@ -78,16 +78,16 @@ export default function Land(): JSX.Element {
       />
 
       {/* <Image
-    alt='Hill'
-    className='absolute top-20 right-40 -translate-y-full z-10'
-    src='/static/img/footer/tritium-right.svg'
-    width={529}
-    height={176}
-  /> */}
+        alt='Hill'
+        className='absolute top-20 right-40 -translate-y-full z-10'
+        src='/static/img/footer/tritium-right.svg'
+        width={529}
+        height={176}
+      /> */}
 
       <Image
         alt='Hill'
-        className='absolute top-16 left-1/2 -translate-x-full z-10'
+        className='absolute top-16 left-1/2 -translate-x-full z-10 max-lg:hidden'
         src='/static/img/footer/tritium-center.svg'
         width={142}
         height={58}
