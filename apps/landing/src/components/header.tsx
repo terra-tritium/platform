@@ -1,12 +1,17 @@
+'use client'
+
 import type { JSX } from 'react'
+import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 
-import { Logo, buttonVariants, typographyVariants } from '@terratritium/ui'
+import { Logo, cn, typographyVariants } from '@terratritium/ui'
 
 import { Orbit } from '@/components'
-import { mainMenu, socialMenu } from '@/data'
+import { mainMenu } from '@/data'
 
 export default function Header(): JSX.Element {
+  const pathname = usePathname()
+
   return (
     <>
       <Orbit className='container' />
@@ -19,8 +24,15 @@ export default function Header(): JSX.Element {
           })}
         >
           {mainMenu.map(({ href, title }, index) => (
-            // biome-ignore lint/suspicious/noArrayIndexKey: This is a static list
-            <Link className='hover:text-white' key={index} href={href}>
+            <Link
+              className={cn(
+                'hover:text-white',
+                pathname === href ? 'text-white' : null,
+              )}
+              // biome-ignore lint/suspicious/noArrayIndexKey: This is a static list
+              key={index}
+              href={href}
+            >
               {title}
             </Link>
           ))}
@@ -33,13 +45,14 @@ export default function Header(): JSX.Element {
         <ul className='flex justify-end items-center space-x-4'>
           <li>
             <Link
-              className={buttonVariants({
-                className: '!rounded-full px-6',
-                variant: 'outline',
-              })}
+              className='relative inline-flex rounded-md px-6 py-2 shadow-[0_1000px_0_0_hsl(246_40%_21%)_inset]'
               href='/sign-up'
             >
-              Play now
+              <span className='animate-flip before:animate-rotate absolute inset-0 h-full w-full rounded-md [mask:linear-gradient(white,_transparent_50%)] before:absolute before:aspect-square before:w-[200%] before:rotate-[-90deg] before:bg-[conic-gradient(from_0deg,transparent_0_340deg,white_360deg)] before:[inset:0_auto_auto_50%] before:[translate:-50%_-15%]' />
+
+              <span className='absolute bg-background rounded-md inset-[1px]' />
+
+              <div className='z-10 font-medium'>Play now</div>
             </Link>
           </li>
         </ul>
