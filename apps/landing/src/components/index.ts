@@ -1,4 +1,5 @@
 export { default as Footer } from './footer'
+export { default as Header } from './header'
 export { default as Land } from './land'
 export { default as Orbit } from './orbit'
 export { default as Stars } from './stars'

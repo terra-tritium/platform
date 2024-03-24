@@ -1,11 +1,34 @@
-import type { Menu } from '@/type'
+import type { Menu, Social } from '@/type'
 
 export const mainMenu = [
-  { href: '/', title: 'Overview' },
-  { href: '/customers', title: 'Customers' },
-  { href: '/products', title: 'Products' },
-  { href: '/settings', title: 'Settings' },
+  { href: '/', title: 'Home' },
+  { href: '/game', title: 'Game' },
+  { href: '/token', title: 'Token' },
+  { href: '/community', title: 'Community' },
 ] as Array<Menu>
+
+export const socialMenu = [
+  {
+    icon: 'youTube',
+    title: 'YouTube',
+    href: 'https://youtube.com/@terratritium',
+  },
+  {
+    icon: 'twitch',
+    title: 'Twitch',
+    href: 'https://twitch.tv/terratritium',
+  },
+  {
+    icon: 'instagram',
+    title: 'Instagram',
+    href: 'https://instagram.com/terratritium',
+  },
+  {
+    icon: 'x',
+    title: 'X',
+    href: 'https://twitter.com/terratritium',
+  },
+] as Array<Social>
 
 export const footerMenu = [
   {
@@ -165,19 +188,19 @@ export const footerMenu = [
 
 export const legalMenu = [
   {
-    title: 'Legal',
     href: '/legal',
+    title: 'Legal',
   },
   {
-    title: 'Disclaimer',
     href: '/disclaimer',
+    title: 'Disclaimer',
   },
   {
-    title: 'Privacy Policy',
     href: '/privacy',
+    title: 'Privacy Policy',
   },
   {
-    title: 'Terms of Use',
     href: '/terms',
+    title: 'Terms of Use',
   },
 ] as Array<Menu>
