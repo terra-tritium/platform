@@ -72,7 +72,7 @@ export default function Footer(): JSX.Element {
           Follow us at
         </h3>
 
-        <div className='mt-2' />
+        <div className='mt-4' />
 
         <ul className='flex justify-center space-x-4'>
           {socialMenu.map(({ icon, href, title }, index) => {
@@ -82,7 +82,7 @@ export default function Footer(): JSX.Element {
               // biome-ignore lint/suspicious/noArrayIndexKey: This is a static list
               <li key={index}>
                 <Link href={href} rel='nofollow noopener' target='_blank'>
-                  <Icon className='w-8 h-8' />
+                  <Icon className='w-9 h-9' />
 
                   <span className='sr-only'>{title}</span>
                 </Link>
