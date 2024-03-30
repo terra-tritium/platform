@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "@terratritium/config",
+  "version": "0.0.0",
+  "private": true,
+  "license": "COPYRIGHT",
+  "main": "./src/index.ts",
+  "devDependencies": {
+    "@terratritium/typescript-config": "workspace:*"
+  }
+}

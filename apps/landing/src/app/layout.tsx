@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import type { ReactNode, JSX } from 'react'
 
+import { config } from '@terratritium/config'
 import { TailwindIndicator } from '@terratritium/ui'
 
 import { fontSans } from '@/lib/fonts'
@@ -9,8 +10,10 @@ import '@/styles/globals.css'
 import Providers from './providers'
 
 export const metadata: Metadata = {
-  title: 'Terra Tritium',
-  description: 'TBD',
+  ...config.metadata.landing,
+  icons: {
+    icon: [{ url: '/favicon.svg', type: 'image/svg+xml' }],
+  },
 }
 
 interface RootLayoutProps {

@@ -1,9 +1,23 @@
-import { isAxiosError } from './lib/api'
+import { type AxiosError, isAxiosError } from './lib/api'
 
-export const handleError = (error: unknown, defaultMessage?: string) => {
+export const handleError = (
+  error: Error | AxiosError,
+  defaultMessage?: string,
+) => {
   if (isAxiosError(error)) {
     if (typeof error.response?.data === 'string') {
       return error.response.data
+    }
+
+    if (typeof error.response?.data.message === 'object') {
+      const message: string[] = []
+      const messages = error.response?.data.message
+
+      for (const k in messages) {
+        message.push(messages[k])
+      }
+
+      return message.join(' ')
     }
 
     return (

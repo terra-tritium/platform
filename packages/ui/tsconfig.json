@@ -4,6 +4,6 @@
   "compilerOptions": {
     "outDir": "dist"
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "tailwind.config.ts"],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/.d.ts", "tailwind.config.ts"],
   "exclude": ["dist", "node_modules"]
 }

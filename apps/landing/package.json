@@ -12,20 +12,19 @@
     "start": "next start"
   },
   "dependencies": {
-    "@hookform/resolvers": "~3.3.4",
     "@tanstack/react-query": "~5.28.6",
     "@tanstack/react-query-devtools": "~5.28.6",
     "@tanstack/react-query-next-experimental": "~5.28.6",
-    "@terratritium/ui": "workspace:~",
+    "@terratritium/config": "workspace:*",
+    "@terratritium/ui": "workspace:*",
     "axios": "~1.6.8",
     "next": "14.1.4",
     "react": "~18.2.0",
     "react-dom": "~18.2.0",
-    "react-hook-form": "~7.51.1",
     "zod": "~3.22.4"
   },
   "devDependencies": {
-    "@terratritium/typescript-config": "workspace:~",
+    "@terratritium/typescript-config": "workspace:*",
     "@types/node": "~20.11.30",
     "@types/react": "~18.2.67",
     "@types/react-dom": "~18.2.22",

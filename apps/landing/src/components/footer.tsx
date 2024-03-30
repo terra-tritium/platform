@@ -1,11 +1,9 @@
 import type { JSX } from 'react'
 import Link from 'next/link'
 
-import { typographyVariants, Icon, cn, Logo } from '@terratritium/ui'
+import { typographyVariants, Icon, cn, Logo, Land } from '@terratritium/ui'
 
 import { footerMenu, socialMenu, legalMenu } from '@/data'
-
-import Land from './land'
 
 export default function Footer(): JSX.Element {
   return (
