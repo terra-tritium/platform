@@ -17,16 +17,20 @@ export default function PublicLayout({
       <Orbit className='container' />
 
       <section className='container relative pt-8 md:pt-12 flex-1'>
-        <Link className='flex justify-center' href='/'>
-          <Logo.terraTritium className='h-12' />
-        </Link>
+        <header>
+          <Link className='flex justify-center' href='/'>
+            <Logo.terraTritium className='h-12' />
+          </Link>
+        </header>
 
         <div className='my-12 md:my-24 z-10'>
           <ReCaptchaProvider>{children}</ReCaptchaProvider>
         </div>
       </section>
 
-      <Land />
+      <footer>
+        <Land />
+      </footer>
     </main>
   )
 }

@@ -31,25 +31,7 @@ import { signUpSchema } from '@/schemas'
 import { api } from '@/lib/api'
 import { handleError } from '@/utils'
 import { HookFormDevtool } from '@/components'
-
-type Country = {
-  flag: string
-  value: string
-  label: string
-}
-
-const countries: Country[] = [
-  {
-    value: '12',
-    label: 'Argentina',
-    flag: '🇦🇷',
-  },
-  {
-    value: '3',
-    label: 'Brazil',
-    flag: '🇧🇷',
-  },
-]
+import { useGetCountries } from '@/hooks/api/use-country'
 
 export const formSchema = signUpSchema
 
@@ -61,6 +43,7 @@ export default function UserRegisterForm({
   className,
   ...props
 }: UserRegisterFormProps): JSX.Element {
+  const { data: countries, isLoading: isCountriesLoading } = useGetCountries()
   const { executeRecaptcha } = useGoogleReCaptcha()
 
   const { register, formState, reset, handleSubmit, control, ...form } =
@@ -218,11 +201,15 @@ export default function UserRegisterForm({
                       </SelectTrigger>
 
                       <SelectContent>
-                        {countries.map(({ value, label }) => (
-                          <SelectItem key={value} value={value}>
-                            {label}
-                          </SelectItem>
-                        ))}
+                        {isCountriesLoading ? (
+                          <SelectItem value='loading'>Loading...</SelectItem>
+                        ) : (
+                          countries?.map(({ id: value, name: label }) => (
+                            <SelectItem key={value} value={value.toString()}>
+                              {label}
+                            </SelectItem>
+                          ))
+                        )}
                       </SelectContent>
                     </Select>
                   </div>
