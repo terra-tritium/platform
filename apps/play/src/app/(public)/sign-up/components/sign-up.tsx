@@ -43,7 +43,13 @@ export default function SignUp(): JSX.Element {
 
           <div className='mt-6' />
 
-          <Button className='w-full' size='lg' type='submit' variant='outline'>
+          <Button
+            className='w-full'
+            disabled={true}
+            size='lg'
+            type='submit'
+            variant='outline'
+          >
             <span>Google</span>
 
             <Icon.moveRight className='w-5 h-5' />
