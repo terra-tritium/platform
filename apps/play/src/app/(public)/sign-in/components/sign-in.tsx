@@ -27,25 +27,29 @@ export default function SignIn(): JSX.Element {
 
       <UserLoginForm />
 
-      <div className='mt-6' />
+      {process.env.NODE_ENV !== 'production' && (
+        <>
+          <div className='mt-6' />
 
-      <div className='flex items-center space-x-4'>
-        <span className='w-full h-px bg-gradient-to-r from-transparent to-orange-500 ' />
+          <div className='flex items-center space-x-4'>
+            <span className='w-full h-px bg-gradient-to-r from-transparent to-orange-500 ' />
 
-        <div className='text-xs uppercase font-semibold shrink-0 tracking-wide'>
-          Or continue with
-        </div>
+            <div className='text-xs uppercase font-semibold shrink-0 tracking-wide'>
+              Or continue with
+            </div>
 
-        <span className='w-full h-px bg-gradient-to-l from-transparent to-orange-500 ' />
-      </div>
+            <span className='w-full h-px bg-gradient-to-l from-transparent to-orange-500 ' />
+          </div>
 
-      <div className='mt-6' />
+          <div className='mt-6' />
 
-      <Button className='w-full' size='lg' type='submit' variant='outline'>
-        <span>Google</span>
+          <Button className='w-full' size='lg' type='submit' variant='outline'>
+            <span>Google</span>
 
-        <Icon.moveRight className='w-5 h-5' />
-      </Button>
+            <Icon.moveRight className='w-5 h-5' />
+          </Button>
+        </>
+      )}
     </div>
   )
 }
