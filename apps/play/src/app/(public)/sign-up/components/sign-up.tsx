@@ -23,7 +23,7 @@ export default function SignUp(): JSX.Element {
         .
       </p>
 
-      {process.env.NODE_ENV !== 'production' && (
+      {process.env.VERCEL_ENV !== 'production' && (
         <>
           <div className='mt-8' />
 

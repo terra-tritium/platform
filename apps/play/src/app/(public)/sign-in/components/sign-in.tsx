@@ -27,7 +27,7 @@ export default function SignIn(): JSX.Element {
 
       <UserLoginForm />
 
-      {process.env.NODE_ENV !== 'production' && (
+      {process.env.VERCEL_ENV !== 'production' && (
         <>
           <div className='mt-6' />
 
