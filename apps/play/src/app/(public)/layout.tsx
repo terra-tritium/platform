@@ -1,9 +1,10 @@
 import type { ReactNode, JSX } from 'react'
 import Link from 'next/link'
 
-import { Orbit, Icon, Logo, Land } from '@terratritium/ui'
+import { Orbit, Icon, Logo } from '@terratritium/ui'
 
 import ReCaptchaProvider from '@/app/providers/recaptcha'
+import { Footer } from '@/components'
 
 interface PublicLayoutProps {
   children: ReactNode
@@ -37,7 +38,7 @@ export default function PublicLayout({
         </div>
       </section>
 
-      <Land />
+      <Footer />
     </main>
   )
 }

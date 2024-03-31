@@ -1,66 +1,14 @@
 import type { JSX } from 'react'
 import Link from 'next/link'
 
-import { typographyVariants, Icon, cn, Logo, Land } from '@terratritium/ui'
+import { typographyVariants, Logo, Land } from '@terratritium/ui'
 
-import { footerMenu, socialMenu, legalMenu } from '@/data'
+import { socialMenu, legalMenu } from '@/data'
 
 export default function Footer(): JSX.Element {
   return (
     <>
       <footer className='container'>
-        <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 gap-y-8 xl:gap-y-12'>
-          {footerMenu.map(({ title, items }, index) => (
-            // biome-ignore lint/suspicious/noArrayIndexKey: This is a static list
-            <div key={index}>
-              <h3>{title}</h3>
-
-              <div className='mt-2' />
-
-              <ul
-                className={typographyVariants({
-                  className: 'leading-8',
-                  variant: 'muted',
-                })}
-              >
-                {items.map(({ href, title, icon, daysLeft }, index) => {
-                  const Ikon = Icon[icon as keyof typeof Icon]
-
-                  return (
-                    // biome-ignore lint/suspicious/noArrayIndexKey: This is a static list
-                    <li key={index}>
-                      <Link
-                        className={cn(
-                          'flex group hover:text-white',
-                          icon ? 'items-center space-x-1' : null,
-                        )}
-                        href={href}
-                      >
-                        <span>{title}</span>
-
-                        {icon ? (
-                          <Ikon className='w-4 h-4 stroke-zinc-700' />
-                        ) : null}
-
-                        {daysLeft ? (
-                          <span className='self-center px-1.5 ml-2 text-[11px] font-medium leading-4 rounded-full border border-indigo-600'>
-                            <span className='group-hover:hidden'>Soon</span>
-                            <span className='hidden group-hover:block'>
-                              {daysLeft} days
-                            </span>
-                          </span>
-                        ) : null}
-                      </Link>
-                    </li>
-                  )
-                })}
-              </ul>
-            </div>
-          ))}
-        </div>
-
-        <div className='mt-16' />
-
         <h3
           className={typographyVariants({
             className: 'text-sm text-center',
