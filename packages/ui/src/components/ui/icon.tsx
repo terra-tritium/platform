@@ -6,9 +6,11 @@ import {
   Loader2,
   LockKeyhole,
   MapPin,
+  MoveLeft,
   MoveRight,
   Newspaper,
   User,
+  X,
 } from 'lucide-react'
 
 type IconProps = HTMLAttributes<SVGElement>
@@ -20,7 +22,9 @@ export const Icon = {
   loader2: (props: IconProps) => <Loader2 {...props} />,
   lockKeyhole: (props: IconProps) => <LockKeyhole {...props} />,
   mapPin: (props: IconProps) => <MapPin {...props} />,
+  moveLeft: (props: IconProps) => <MoveLeft {...props} />,
   moveRight: (props: IconProps) => <MoveRight {...props} />,
   newspaper: (props: IconProps) => <Newspaper {...props} />,
   user: (props: IconProps) => <User {...props} />,
+  x: (props: IconProps) => <X {...props} />,
 }
