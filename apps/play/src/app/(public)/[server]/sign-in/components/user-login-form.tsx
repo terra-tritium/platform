@@ -1,5 +1,5 @@
 import type { z } from 'zod'
-import type { HTMLAttributes, JSX } from 'react'
+import { type HTMLAttributes, type JSX, useState } from 'react'
 import { useForm, type SubmitHandler } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useMutation } from '@tanstack/react-query'
@@ -39,6 +39,7 @@ export default function UserRegisterForm({
   server,
   ...props
 }: UserRegisterFormProps): JSX.Element {
+  const [isPassVisible, setIsPassVisible] = useState(false)
   const { executeRecaptcha } = useGoogleReCaptcha()
 
   const { register, formState, reset, handleSubmit, control, ...form } =
@@ -133,11 +134,21 @@ export default function UserRegisterForm({
                     <Input
                       className='pl-11'
                       placeholder='Secure password'
-                      type='password'
+                      type={isPassVisible ? 'text' : 'password'}
                       {...field}
                     />
 
-                    <Icon.eye className='absolute w-4 h-4 top-4 right-4' />
+                    <button
+                      className='absolute top-1 right-1 p-3'
+                      type='button'
+                      onClick={() => setIsPassVisible(!isPassVisible)}
+                    >
+                      {isPassVisible ? (
+                        <Icon.eyeOff className='w-4 h-4' />
+                      ) : (
+                        <Icon.eye className=' w-4 h-4 ' />
+                      )}
+                    </button>
 
                     <Link
                       className='md:absolute md:-right-5 relative top-2 leading-8 translate-x-full hover:underline underline-offset-2'
