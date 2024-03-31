@@ -1,4 +1,7 @@
+'use client'
+
 import type { JSX } from 'react'
+import { useParams } from 'next/navigation'
 import Link from 'next/link'
 
 import { typographyVariants, Button, Icon } from '@terratritium/ui'
@@ -6,6 +9,8 @@ import { typographyVariants, Button, Icon } from '@terratritium/ui'
 import UserLoginForm from './user-login-form'
 
 export default function SignIn(): JSX.Element {
+  const { slug } = useParams<{ slug: string }>()
+
   return (
     <div className='max-w-sm grid mx-auto relative'>
       <h1 className='text-2xl font-medium'>Ready to conquer?</h1>
@@ -16,7 +21,7 @@ export default function SignIn(): JSX.Element {
         New to Terra Tritium?{' '}
         <Link
           className='text-white hover:underline underline-offset-2'
-          href='/sign-up'
+          href={`/${slug}/sign-up`}
         >
           Sign up
         </Link>{' '}
@@ -25,7 +30,7 @@ export default function SignIn(): JSX.Element {
 
       <div className='mt-8' />
 
-      <UserLoginForm />
+      <UserLoginForm pathname={slug} />
 
       {process.env.VERCEL_ENV !== 'production' && (
         <>

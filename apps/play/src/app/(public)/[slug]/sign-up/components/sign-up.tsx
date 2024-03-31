@@ -1,11 +1,16 @@
+'use client'
+
 import type { JSX } from 'react'
 import Link from 'next/link'
+import { useParams } from 'next/navigation'
 
 import { Button, typographyVariants, Icon } from '@terratritium/ui'
 
 import UserRegisterForm from './user-register-form'
 
 export default function SignUp(): JSX.Element {
+  const { slug } = useParams<{ slug: string }>()
+
   return (
     <div className='max-w-sm grid mx-auto relative'>
       <h1 className='text-2xl font-medium'>Time to play!</h1>
@@ -16,7 +21,7 @@ export default function SignUp(): JSX.Element {
         Already have an account?{' '}
         <Link
           className='text-white hover:underline underline-offset-2'
-          href='/sign-in'
+          href={`/${slug}/sign-in`}
         >
           Sign in
         </Link>

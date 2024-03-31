@@ -1,5 +1,3 @@
-'use client'
-
 import type { z } from 'zod'
 import type { HTMLAttributes, JSX } from 'react'
 import { useForm, type SubmitHandler } from 'react-hook-form'

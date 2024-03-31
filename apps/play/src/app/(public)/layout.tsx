@@ -28,9 +28,7 @@ export default function PublicLayout({
         </div>
       </section>
 
-      <footer>
-        <Land />
-      </footer>
+      <Land />
     </main>
   )
 }
