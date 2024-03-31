@@ -12,7 +12,7 @@ export default function SignUp(): JSX.Element {
   const { slug } = useParams<{ slug: string }>()
 
   return (
-    <div className='max-w-sm grid mx-auto relative'>
+    <>
       <h1 className='text-2xl font-medium'>Time to play!</h1>
 
       <div className='mt-2' />
@@ -61,6 +61,6 @@ export default function SignUp(): JSX.Element {
           </Button>
         </>
       )}
-    </div>
+    </>
   )
 }
