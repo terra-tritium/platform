@@ -24,7 +24,7 @@ export default function ServerSelect(): JSX.Element {
         {isServersLoading ? (
           <span className='px-4'>Loading...</span>
         ) : (
-          servers?.map(({ id, slug, name, default: def }) => (
+          servers?.map(({ id, slug, name, type }) => (
             <Link
               className='flex justify-between items-center px-4 hover:bg-white/5'
               href={`/${slug}`}
@@ -32,18 +32,14 @@ export default function ServerSelect(): JSX.Element {
             >
               <span className='font-medium'>{name}</span>
 
-              {def ? (
-                <span
-                  className={typographyVariants({
-                    className: 'text-sm',
-                    variant: 'muted',
-                  })}
-                >
-                  Default
-                </span>
-              ) : (
-                ''
-              )}
+              <span
+                className={typographyVariants({
+                  className: 'text-sm',
+                  variant: 'muted',
+                })}
+              >
+                {type}
+              </span>
             </Link>
           ))
         )}
