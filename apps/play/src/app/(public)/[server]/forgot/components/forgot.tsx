@@ -9,7 +9,7 @@ import { typographyVariants } from '@terratritium/ui'
 import ResetPasswordForm from './reset-password-form'
 
 export default function Forgot(): JSX.Element {
-  const { slug } = useParams<{ slug: string }>()
+  const { server } = useParams<{ server: string }>()
 
   return (
     <>
@@ -23,7 +23,7 @@ export default function Forgot(): JSX.Element {
 
       <div className='mt-8' />
 
-      <ResetPasswordForm />
+      <ResetPasswordForm server={server} />
 
       <div className='mt-8' />
 
@@ -31,7 +31,7 @@ export default function Forgot(): JSX.Element {
         Did you remember your password?{' '}
         <Link
           className='text-white hover:underline underline-offset-2'
-          href={`/${slug}/sign-in`}
+          href={`/${server}/sign-in`}
         >
           Sign in
         </Link>

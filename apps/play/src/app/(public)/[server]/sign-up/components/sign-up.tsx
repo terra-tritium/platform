@@ -1,36 +1,36 @@
 'use client'
 
 import type { JSX } from 'react'
-import { useParams } from 'next/navigation'
 import Link from 'next/link'
+import { useParams } from 'next/navigation'
 
-import { typographyVariants, Button, Icon } from '@terratritium/ui'
+import { Button, typographyVariants, Icon } from '@terratritium/ui'
 
-import UserLoginForm from './user-login-form'
+import UserRegisterForm from './user-register-form'
 
-export default function SignIn(): JSX.Element {
-  const { slug } = useParams<{ slug: string }>()
+export default function SignUp(): JSX.Element {
+  const { server } = useParams<{ server: string }>()
 
   return (
     <>
-      <h1 className='text-2xl font-medium'>Ready to conquer?</h1>
+      <h1 className='text-2xl font-medium'>Time to play!</h1>
 
       <div className='mt-2' />
 
       <p className={typographyVariants({ variant: 'muted' })}>
-        New to Terra Tritium?{' '}
+        Already have an account?{' '}
         <Link
           className='text-white hover:underline underline-offset-2'
-          href={`/${slug}/sign-up`}
+          href={`/${server}/sign-in`}
         >
-          Sign up
-        </Link>{' '}
-        for an account.
+          Sign in
+        </Link>
+        .
       </p>
 
       <div className='mt-8' />
 
-      <UserLoginForm pathname={slug} />
+      <UserRegisterForm server={server} />
 
       {process.env.VERCEL_ENV !== 'production' && (
         <>
@@ -48,7 +48,13 @@ export default function SignIn(): JSX.Element {
 
           <div className='mt-6' />
 
-          <Button className='w-full' size='lg' type='submit' variant='outline'>
+          <Button
+            className='w-full'
+            disabled={true}
+            size='lg'
+            type='submit'
+            variant='outline'
+          >
             <span>Google</span>
 
             <Icon.moveRight className='w-5 h-5' />

@@ -6,13 +6,13 @@ import { Icon } from '@terratritium/ui'
 interface PublicLayoutProps {
   children: ReactNode
   params: {
-    slug: string
+    server: string
   }
 }
 
-export default function SlugLayout({
+export default function ServerLayout({
   children,
-  params: { slug },
+  params: { server },
 }: PublicLayoutProps): JSX.Element {
   return (
     <>
@@ -34,7 +34,7 @@ export default function SlugLayout({
           <span className='w-full h-px bg-gradient-to-r from-transparent to-teal-500 ' />
 
           <div className='text-lg uppercase font-semibold shrink-0 tracking-wide'>
-            {slug}
+            {server}
           </div>
 
           <span className='w-full h-px bg-gradient-to-l from-transparent to-teal-500 ' />

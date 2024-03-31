@@ -20,7 +20,7 @@ import {
 } from '@terratritium/ui'
 
 import { resetPasswordSchema } from '@/schemas'
-import { api } from '@/lib/api'
+import { sapi } from '@/lib/api'
 import { handleError } from '@/utils'
 import { HookFormDevtool } from '@/components'
 
@@ -28,10 +28,13 @@ export const formSchema = resetPasswordSchema
 
 type FormValues = z.infer<typeof formSchema>
 
-interface ResetPasswordFormProps extends HTMLAttributes<HTMLFormElement> {}
+interface ResetPasswordFormProps extends HTMLAttributes<HTMLFormElement> {
+  server: string
+}
 
 export default function ResetPasswordForm({
   className,
+  server,
   ...props
 }: ResetPasswordFormProps): JSX.Element {
   const { register, formState, reset, handleSubmit, control, ...form } =
@@ -46,7 +49,7 @@ export default function ResetPasswordForm({
 
   const mutation = useMutation({
     mutationFn: (values: FormValues) => {
-      return api.post('/user/forgot-password', values)
+      return sapi(server).post('/user/forgot-password', values)
     },
 
     onError(error) {
@@ -59,7 +62,7 @@ export default function ResetPasswordForm({
     },
 
     onSuccess: () => {
-      router.push('/sign-in')
+      router.push(`/${server}/sign-in`)
 
       toast.success('Check your email for a link to reset your password.')
     },

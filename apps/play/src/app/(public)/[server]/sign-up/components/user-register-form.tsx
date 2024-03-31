@@ -5,7 +5,6 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { useMutation } from '@tanstack/react-query'
 import { useRouter } from 'next/navigation'
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3'
-import Link from 'next/link'
 
 import {
   Form,
@@ -14,6 +13,11 @@ import {
   FormLabel,
   FormControl,
   FormMessage,
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
   cn,
   Input,
   Button,
@@ -21,31 +25,35 @@ import {
   toast,
 } from '@terratritium/ui'
 
-import { signInSchema } from '@/schemas'
-import { api } from '@/lib/api'
+import { signUpSchema } from '@/schemas'
+import { sapi } from '@/lib/api'
 import { handleError } from '@/utils'
 import { HookFormDevtool } from '@/components'
+import { useGetCountries } from '@/hooks/api/use-country'
 
-export const formSchema = signInSchema
+export const formSchema = signUpSchema
 
 type FormValues = z.infer<typeof formSchema>
 
 interface UserRegisterFormProps extends HTMLAttributes<HTMLFormElement> {
-  pathname: string
+  server: string
 }
 
 export default function UserRegisterForm({
   className,
-  pathname,
+  server,
   ...props
 }: UserRegisterFormProps): JSX.Element {
+  const { data: countries, isLoading: isCountriesLoading } = useGetCountries()
   const { executeRecaptcha } = useGoogleReCaptcha()
 
   const { register, formState, reset, handleSubmit, control, ...form } =
     useForm<FormValues>({
       defaultValues: {
+        name: '', // FIXME: Change to 'nickname'
         email: '',
         password: '',
+        country: '',
       },
       resolver: zodResolver(formSchema),
     })
@@ -54,24 +62,24 @@ export default function UserRegisterForm({
 
   const mutation = useMutation({
     mutationFn: (values: FormValues) => {
-      return api.post('/user/login', values)
+      return sapi(server).post('/player/register', values)
     },
 
     onError(error) {
       toast.error(
         handleError(
           error,
-          'Sign in is currently not available, please try again later :(',
+          'Sign up is currently not available, please try again later :(',
         ),
       )
     },
 
-    onSuccess: (response) => {
-      // console.log(response.data.token)
-      // console.log(response.data.planet)
-      // https://api-sirius.terratritium.com/api/player/show
-      // https://api-sirius.terratritium.com/api/quadrant/show/A001
-      router.push('https://sirius.terratritium.com')
+    onSuccess: () => {
+      router.push(`/${server}/sign-in`)
+
+      toast.success(
+        'Please check your email to complete the registration process.',
+      )
     },
   })
 
@@ -83,6 +91,7 @@ export default function UserRegisterForm({
     mutation.mutate({
       ...values,
       'g-recaptcha-response': reCaptchaToken,
+      address: 'nowallet',
     })
   }
 
@@ -98,10 +107,35 @@ export default function UserRegisterForm({
         >
           <FormField
             control={control}
+            name='name'
+            render={({ field }) => (
+              <FormItem className='space-y-0'>
+                <FormLabel className='sr-only'>Nickname</FormLabel>
+
+                <FormControl>
+                  <div className='relative'>
+                    <Icon.user className='absolute w-4 h-4 top-4 left-4' />
+
+                    <Input
+                      className='pl-11'
+                      placeholder='Nickname'
+                      type='text'
+                      {...field}
+                    />
+                  </div>
+                </FormControl>
+
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          <FormField
+            control={control}
             name='email'
             render={({ field }) => (
               <FormItem className='space-y-0'>
-                <FormLabel className='sr-only'>First name</FormLabel>
+                <FormLabel className='sr-only'>Email</FormLabel>
 
                 <FormControl>
                   <div className='relative'>
@@ -126,7 +160,7 @@ export default function UserRegisterForm({
             name='password'
             render={({ field }) => (
               <FormItem className='space-y-0'>
-                <FormLabel className='sr-only'>First name</FormLabel>
+                <FormLabel className='sr-only'>Secure password</FormLabel>
 
                 <FormControl>
                   <div className='relative'>
@@ -139,14 +173,46 @@ export default function UserRegisterForm({
                       {...field}
                     />
 
-                    <Icon.eye className='absolute w-4 h-4 top-4 right-4' />
+                    {/* <Icon.eye className='absolute w-4 h-4 top-4 right-4' /> */}
+                  </div>
+                </FormControl>
 
-                    <Link
-                      className='md:absolute md:-right-5 relative top-2 leading-8 translate-x-full hover:underline underline-offset-2'
-                      href={`/${pathname}/forgot`}
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          <FormField
+            control={control}
+            name='country'
+            render={({ field: { onChange } }) => (
+              <FormItem className='space-y-0'>
+                <FormLabel className='sr-only'>Country</FormLabel>
+
+                <FormControl>
+                  <div className='relative'>
+                    <Icon.mapPin className='absolute w-4 h-4 top-4 left-4' />
+
+                    <Select
+                      onValueChange={(value) => onChange(value)}
+                      onOpenChange={(value) => onChange(value)}
                     >
-                      Forgot?
-                    </Link>
+                      <SelectTrigger className='pl-11'>
+                        <SelectValue placeholder='Country' />
+                      </SelectTrigger>
+
+                      <SelectContent>
+                        {isCountriesLoading ? (
+                          <SelectItem value='loading'>Loading...</SelectItem>
+                        ) : (
+                          countries?.map(({ id: value, name: label }) => (
+                            <SelectItem key={value} value={value.toString()}>
+                              {label}
+                            </SelectItem>
+                          ))
+                        )}
+                      </SelectContent>
+                    </Select>
                   </div>
                 </FormControl>
 
