@@ -2,7 +2,7 @@ import { type NextRequest, NextResponse } from 'next/server'
 
 export const dynamic = 'force-dynamic'
 
-export async function GET(req: NextRequest): Promise<Response> {
+export function GET(req: NextRequest): Response {
   const { searchParams } = new URL(req.url)
   const server = searchParams.get('server')
   const token = searchParams.get('token')
