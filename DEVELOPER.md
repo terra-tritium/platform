@@ -1,16 +1,21 @@
 # Developer Guide
 
-## Dependencies
-
-- [Bun](https://bun.sh)
-
 ## Local Development
+
+### Prerequisites
+
+- [Docker](https://docs.docker.com/get-docker)
+- [Docker Compose](https://docs.docker.com/compose/install)
+- [Node.js](https://nodejs.org/en/download)
+- [pnpm](https://pnpm.io/installation)
+
+### Setup
 
 ```sh
 # Install dependencies
-bun install
+pnpm install
 
 # Start the development server
-bunx turbo dev --filter landing
-bunx turbo dev --filter play
+pnpm dev --filter landing
+pnpm dev --filter play
 ```
