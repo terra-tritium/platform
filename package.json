@@ -4,8 +4,9 @@
   "license": "COPYRIGHT",
   "scripts": {
     "clean": "turbo clean",
+    "lint": "trunk check",
+    "format": "trunk fmt",
     "dev": "turbo dev",
-    "lint": "turbo lint",
     "build": "turbo build",
     "start": "turbo start"
   },

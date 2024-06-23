@@ -13,7 +13,7 @@ export default function LobbyLayout({
     <main className='flex flex-col'>
       <Header />
 
-      <div className='my-12 md:my-24 z-10 flex-1'>{children}</div>
+      <div className='z-10 my-12 flex-1 md:my-24'>{children}</div>
 
       <Footer />
     </main>
