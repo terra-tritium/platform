@@ -12,4 +12,5 @@ bun install
 
 # Start the development server
 bunx turbo dev --filter landing
+bunx turbo dev --filter play
 ```
