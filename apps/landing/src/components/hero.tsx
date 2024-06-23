@@ -1,5 +1,7 @@
-import { Icon, Sprite } from '@terratritium/ui'
 import type { JSX } from 'react'
+import Link from 'next/link'
+
+import { Icon, Sprite } from '@terratritium/ui'
 
 export default function Hero(): JSX.Element {
   return (
@@ -20,7 +22,7 @@ export default function Hero(): JSX.Element {
         </div>
       </div>
 
-      <div className='relative col-start-7 row-start-4'>
+      <Link className='relative col-start-7 row-start-4' href='/'>
         <Sprite.dots className='-translate-y-1/2 -top-1 absolute right-0 w-24 translate-x-1/2' />
 
         <div className='aspec relative flex aspect-1/1 flex-col justify-between space-y-3 bg-green-500 px-7 py-8 text-gray-900'>
@@ -28,7 +30,7 @@ export default function Hero(): JSX.Element {
 
           <span className='font-semibold text-xl'>Buy TRIT</span>
         </div>
-      </div>
+      </Link>
 
       <div className='relative col-start-2 col-end-4 row-span-2 aspect-1/1'>
         <Sprite.dots className='-translate-x-1/2 absolute bottom-24 left-0 w-48' />
