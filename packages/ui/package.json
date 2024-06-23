@@ -18,7 +18,7 @@
     "clean": "bunx rimraf ./.turbo"
   },
   "dependencies": {
-    "@terratritium/tailwind-config": "workspace:*",
+    "@terratritium/tailwind-config": "workspace:~",
     "@hookform/resolvers": "~3.3.4",
     "@radix-ui/react-avatar": "~1.0.4",
     "@radix-ui/react-dialog": "~1.0.5",
@@ -44,7 +44,7 @@
     "zod": "~3.22.4"
   },
   "devDependencies": {
-    "@terratritium/typescript-config": "workspace:*",
+    "@terratritium/typescript-config": "workspace:~",
     "@types/node": "~20.12.2",
     "@types/react": "~18.2.73",
     "@types/react-dom": "~18.2.23",

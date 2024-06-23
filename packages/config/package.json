@@ -6,6 +6,6 @@
   "license": "COPYRIGHT",
   "main": "./src/index.ts",
   "devDependencies": {
-    "@terratritium/typescript-config": "workspace:*"
+    "@terratritium/typescript-config": "workspace:~"
   }
 }
