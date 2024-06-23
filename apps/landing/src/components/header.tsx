@@ -6,6 +6,8 @@ import Link from 'next/link'
 
 import { Orbit, Logo, cn, typographyVariants } from '@terratritium/ui'
 
+import Meteor from './meteor'
+
 import { mainMenu } from '@/data'
 
 export default function Header(): JSX.Element {
@@ -15,10 +17,12 @@ export default function Header(): JSX.Element {
     <>
       <Orbit className='container' />
 
+      <Meteor className='container' />
+
       <header className='container grid grid-cols-[1fr_248px_1fr] pt-8 md:pt-12'>
         <nav
           className={typographyVariants({
-            className: 'flex gap-x-4 items-center font-medium',
+            className: 'flex items-center gap-x-4 font-medium',
             variant: 'muted',
           })}
         >
@@ -41,15 +45,15 @@ export default function Header(): JSX.Element {
           <Logo.terraTritium className='h-12' />
         </Link>
 
-        <ul className='flex justify-end items-center space-x-4'>
+        <ul className='flex items-center justify-end space-x-4'>
           <li>
             <Link
               className='relative inline-flex rounded-md px-6 py-2 shadow-[0_1000px_0_0_hsl(246_40%_21%)_inset]'
               href={process.env.NEXT_PUBLIC_PLAY_URL as string}
             >
-              <span className='animate-flip before:animate-rotate absolute inset-0 h-full w-full rounded-md [mask:linear-gradient(white,_transparent_50%)] before:absolute before:aspect-square before:w-[200%] before:rotate-[-90deg] before:bg-[conic-gradient(from_0deg,transparent_0_340deg,white_360deg)] before:[inset:0_auto_auto_50%] before:[translate:-50%_-15%]' />
+              <span className='absolute inset-0 h-full w-full animate-flip rounded-md [mask:linear-gradient(white,_transparent_50%)] before:absolute before:aspect-square before:w-[200%] before:rotate-[-90deg] before:animate-rotate before:bg-[conic-gradient(from_0deg,transparent_0_340deg,white_360deg)] before:[inset:0_auto_auto_50%] before:[translate:-50%_-15%]' />
 
-              <span className='absolute bg-background rounded-md inset-[1px]' />
+              <span className='absolute inset-[1px] rounded-md bg-background' />
 
               <div className='z-10 font-medium'>Play now</div>
             </Link>
