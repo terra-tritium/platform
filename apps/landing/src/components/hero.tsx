@@ -25,7 +25,7 @@ export default function Hero(): JSX.Element {
       <Link className='relative col-start-7 row-start-4' href='/'>
         <Sprite.dots className='-translate-y-1/2 -top-1 absolute right-0 w-24 translate-x-1/2' />
 
-        <div className='aspec relative flex aspect-1/1 flex-col justify-between space-y-3 bg-green-500 px-7 py-8 text-gray-900'>
+        <div className='aspec relative flex aspect-1/1 flex-col justify-between space-y-3 bg-cyan-500 px-7 py-8 text-gray-900'>
           <Icon.coins className='size-10' />
 
           <span className='font-semibold text-xl'>Buy TRIT</span>
