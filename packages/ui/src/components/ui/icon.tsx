@@ -1,5 +1,6 @@
 import type { HTMLAttributes } from 'react'
 import {
+  Coins,
   ArrowUpRight,
   AtSign,
   Eye,
@@ -10,6 +11,7 @@ import {
   MoveLeft,
   MoveRight,
   Newspaper,
+  Play,
   User,
   X,
 } from 'lucide-react'
@@ -17,6 +19,7 @@ import {
 type IconProps = HTMLAttributes<SVGElement>
 
 export const Icon = {
+  coins: (props: IconProps) => <Coins {...props} />,
   arrowUpRight: (props: IconProps) => <ArrowUpRight {...props} />,
   atSign: (props: IconProps) => <AtSign {...props} />,
   eye: (props: IconProps) => <Eye {...props} />,
@@ -27,6 +30,7 @@ export const Icon = {
   moveLeft: (props: IconProps) => <MoveLeft {...props} />,
   moveRight: (props: IconProps) => <MoveRight {...props} />,
   newspaper: (props: IconProps) => <Newspaper {...props} />,
+  play: (props: IconProps) => <Play {...props} />,
   user: (props: IconProps) => <User {...props} />,
   x: (props: IconProps) => <X {...props} />,
 }
