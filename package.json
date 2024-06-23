@@ -10,15 +10,15 @@
     "start": "turbo start"
   },
   "dependencies": {
-    "turbo": "~1.13.0"
+    "turbo": "~1.13.4"
   },
   "devDependencies": {
     "@terratritium/typescript-config": "workspace:~",
-    "@biomejs/biome": "~1.6.3"
+    "@biomejs/biome": "~1.8.2"
   },
   "engines": {
     "node": ">=18"
   },
-  "packageManager": "bun@1.0.23",
+  "packageManager": "pnpm@8.15.1",
   "workspaces": ["apps/*", "packages/*", "services/*", "tooling/*"]
 }
