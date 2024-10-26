@@ -106,6 +106,42 @@ export default function TokenPage(): JSX.Element {
           </div>
         </div>
       </div>
+
+      <h2>Tritium Token ($TRIT)</h2>
+
+      <p>
+        Tritium ($TRIT) is the official in-game currency of Terra Tritium,
+        designed to power the entire game ecosystem. Players can earn, trade,
+        and spend $TRIT within the game for purchasing resources, upgrading
+        equipment, and unlocking exclusive features. As a utility token, $TRIT
+        offers players seamless interactions within the world of Terra Tritium,
+        creating a dynamic economy driven by user engagement and strategy.
+      </p>
+
+      <p>
+        Beyond its role in-game, $TRIT can also be traded on external platforms
+        like Coinhall, allowing players to explore further trading opportunities
+        and investment strategies. The value of $TRIT evolves with the
+        community, reflecting both in-game activity and broader market
+        movements.
+      </p>
+
+      <h2>$TRIT usage in Tritium Bridge</h2>
+
+      <p>
+        The Tritium Bridge is a dedicated platform that enables the easy and
+        secure transfer of $TRIT between Terra Tritium and external wallets or
+        exchanges. It allows users to seamlessly move tokens between in-game
+        balances and personal wallets, ensuring that the in-game economy stays
+        interconnected with the larger blockchain ecosystem.
+      </p>
+
+      <p>
+        Whether you're looking to stake your tokens, transfer them for trading,
+        or reinvest in the game, the Tritium Bridge offers a smooth and
+        efficient pathway. With its user-friendly interface and strong security
+        protocols, managing your $TRIT tokens has never been easier.
+      </p>
     </div>
   )
 }
