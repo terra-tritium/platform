@@ -63,7 +63,7 @@ const teams = [
 export default function Team(): JSX.Element {
   return (
     <div className='container'>
-      <h2 className='font-bold leading-none tracking-tighter'>
+      {/* <h2 className='font-bold leading-none tracking-tighter'>
         <span
           className='block text-6xl text-transparent'
           style={{ WebkitTextStroke: '1px white' }}
@@ -102,7 +102,7 @@ export default function Team(): JSX.Element {
             </p>
           </div>
         ))}
-      </div>
+      </div> */}
     </div>
   )
 }

@@ -40,25 +40,25 @@ export default function NFT(): JSX.Element {
           <img
             alt=''
             className='mx-auto h-full w-full rounded-lg object-cover'
-            src='https://landingfoliocom.imgix.net/store/collection/niftyui/images/hero-single/2/image-1.png'
+            src='https://assets.miata.io/preview/3/fe/3fe0b2b8b0d4cc8f9805a4f31b9345a55eafe39cd1fff4c6035ad71758f71fdd.jpg'
           />
 
           <img
             alt=''
             className='mx-auto h-full w-full rounded-lg object-cover'
-            src='https://landingfoliocom.imgix.net/store/collection/niftyui/images/hero-single/2/image-2.png'
+            src='https://assets.miata.io/preview/7/5c/75c0160518a1b2c235e333ff522b8b6772cd85462915c443e0a665ea31eeb0d9.jpg'
           />
 
           <img
             alt=''
             className='mx-auto h-full w-full rotate-3 transform rounded-lg object-cover'
-            src='https://landingfoliocom.imgix.net/store/collection/niftyui/images/hero-single/2/image-4.png'
+            src='https://assets.miata.io/preview/e/4c/e4c0cf6a25e17b3aa8e30b6c95e0a57b5510178d063af16ee181c5a8f324b850.jpg'
           />
 
           <img
             alt=''
             className='mx-auto h-full w-full rounded-lg object-cover'
-            src='https://landingfoliocom.imgix.net/store/collection/niftyui/images/hero-single/2/image-3.png'
+            src='https://assets.miata.io/preview/6/45/64585a984657b9830157d34bf28929281edc98364df1bf7c6bf0ca646488a96e.jpg'
           />
         </div>
       </div>

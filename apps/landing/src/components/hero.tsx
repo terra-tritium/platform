@@ -22,7 +22,7 @@ export default function Hero(): JSX.Element {
         </div>
       </div>
 
-      <Link className='relative col-start-7 row-start-4' href='/'>
+      <Link className='relative col-start-7 row-start-4' target='blank' href='https://coinhall.org/terraclassic/terra1rdm4u439w8lery29m5dv5z6w7raea0gvt29qefqhr37n5n4yhphsxlqpwc'>
         <Sprite.dots className='-translate-y-1/2 -top-1 absolute right-0 w-24 translate-x-1/2' />
 
         <div className='aspec relative flex aspect-1/1 flex-col justify-between space-y-3 bg-cyan-500 px-7 py-8 text-gray-900'>
@@ -37,7 +37,7 @@ export default function Hero(): JSX.Element {
 
         <div
           className='relative z-10 aspect-square bg-cover bg-indigo-500 bg-no-repeat'
-          style={{ backgroundImage: 'url(/_static/img/person.webp)' }}
+          style={{ backgroundImage: 'url(/_static/img/game01.png)' }}
         />
       </div>
 
@@ -73,18 +73,20 @@ export default function Hero(): JSX.Element {
       </div>
 
       <div className='col-start-2 space-y-1'>
-        <div className='pt-3 text-xl'>Card</div>
+        <div className='pt-3 text-xl'>Galaxy</div>
 
-        <div className='text-muted-foreground text-sm'>Origins Colonizer</div>
+        <div className='text-muted-foreground text-sm'>Explore the universe</div>
       </div>
 
       <div className='col-start-4'>
         <div className='relative aspect-1/1'>
-          <img src='/_static/img/card-origins-colonizer.webp' alt='' />
+          <img src='/_static/img/game02.png' alt='' />
 
-          <div className='absolute right-0 bottom-0 grid h-12 w-12 cursor-pointer place-items-center bg-white text-gray-900 transition-colors hover:bg-blue-600 hover:text-white'>
-            <Icon.play className='size-4 fill-current' />
-          </div>
+          <a href='https://www.youtube.com/@terratritium' target='blank'>
+            <div className='absolute right-0 bottom-0 grid h-12 w-12 cursor-pointer place-items-center bg-white text-gray-900 transition-colors hover:bg-blue-600 hover:text-white'>
+              <Icon.play className='size-4 fill-current' />
+            </div>
+          </a>
         </div>
       </div>
 
