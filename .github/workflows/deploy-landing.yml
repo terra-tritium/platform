@@ -1,0 +1,40 @@
+---
+name: Deploy Landing
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - apps/web/**
+      - packages/config/**
+      - packages/ui/**
+  pull_request:
+    paths:
+      - apps/web/**
+      - packages/config/**
+      - packages/ui/**
+  workflow_dispatch:
+
+jobs:
+  release:
+    name: Deployment
+    runs-on: ubuntu-22.04
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Vercel deploy
+        uses: amondnet/vercel-action@v25
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID}}
+          vercel-project-id: ${{ secrets.VERCEL_LANDING_PROJECT_ID}}
+          vercel-args: ${{ github.ref == 'refs/heads/main' && '--prod' || '' }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          alias-domains: |
+            terra-tritium-web.vercel.app
