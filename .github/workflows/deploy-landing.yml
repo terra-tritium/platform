@@ -6,12 +6,12 @@ on:
     branches:
       - main
     paths:
-      - apps/web/**
+      - apps/landing/**
       - packages/config/**
       - packages/ui/**
   pull_request:
     paths:
-      - apps/web/**
+      - apps/landing/**
       - packages/config/**
       - packages/ui/**
   workflow_dispatch:
@@ -37,4 +37,4 @@ jobs:
           vercel-args: ${{ github.ref == 'refs/heads/main' && '--prod' || '' }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
           alias-domains: |
-            terra-tritium-web.vercel.app
+            terra-tritium-landing.vercel.app
