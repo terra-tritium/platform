@@ -41,7 +41,7 @@ export default function Header(): JSX.Element {
           ))}
         </nav>
 
-        <Link className='flex justify-center' href='/'>
+        <Link className='flex justify-center' href='https://play.terratritium.com'>
           <Logo.terraTritium className='h-12' />
         </Link>
 
@@ -49,7 +49,7 @@ export default function Header(): JSX.Element {
           <li>
             <Link
               className='group relative inline-flex rounded-md px-6 py-2 shadow-[0_1000px_0_0_hsl(246_40%_21%)_inset]'
-              href={process.env.NEXT_PUBLIC_PLAY_URL as string}
+              href="https://play.terratritium.com" target='blank'
             >
               <span className='absolute inset-0 h-full w-full animate-flip rounded-md [mask:linear-gradient(white,_transparent_50%)] before:absolute before:aspect-square before:w-[200%] before:rotate-[-90deg] before:animate-rotate before:bg-[conic-gradient(from_0deg,transparent_0_340deg,white_360deg)] before:[inset:0_auto_auto_50%] before:[translate:-50%_-15%]' />
 

@@ -65,10 +65,6 @@ export default function Hero(): JSX.Element {
       <div className='col-span-2 col-start-6'>
         <div className='relative grid aspect-2/1 place-items-center bg-indigo-600'>
           <Sprite.wave className='stroke-current px-4' />
-
-          <div className='absolute right-0 bottom-0 grid h-12 w-12 cursor-pointer place-items-center bg-indigo-700'>
-            <Icon.play className='size-4 fill-current' />
-          </div>
         </div>
       </div>
 
@@ -91,15 +87,9 @@ export default function Hero(): JSX.Element {
       </div>
 
       <div className='col-start-6 space-y-1'>
-        <div className='pt-3 text-xl'>Roadmap</div>
+        <div className='pt-3 text-xl'>Galactic Alliance</div>
 
-        <div className='text-muted-foreground text-sm'>By Andry</div>
-      </div>
-
-      <div className='col-start-7'>
-        <div className='pt-4 text-right text-muted-foreground text-sm'>
-          23:45
-        </div>
+        <div className='text-muted-foreground text-sm'>Build a team and be part of communities</div>
       </div>
 
       <div className='col-start-4 space-y-1'>

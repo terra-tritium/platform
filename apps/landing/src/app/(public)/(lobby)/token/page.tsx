@@ -16,7 +16,7 @@ export default function TokenPage(): JSX.Element {
 
         <div className='flex items-center space-x-4 lg:space-x-16 sm:space-x-8'>
           <div className='space-y-2'>
-            <p className='font-bold text-4xl xl:text-6xl'>491,494,500</p>
+            <p className='font-bold text-4xl xl:text-6xl'>481,435,699</p>
 
             <p className='text-muted-foreground lg:text-xl'>Total Supply</p>
           </div>
@@ -98,7 +98,7 @@ export default function TokenPage(): JSX.Element {
           </svg>
 
           <div className='space-y-2'>
-            <p className='font-bold text-4xl xl:text-6xl'>113,697,081</p>
+            <p className='font-bold text-4xl xl:text-6xl'>108,593,579</p>
 
             <p className='text-muted-foreground lg:text-xl'>
               Circulating Supply

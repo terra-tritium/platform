@@ -2,7 +2,7 @@ import type { Menu, Social } from '@/type'
 
 export const mainMenu = [
   { href: '/', title: 'Home' },
-  { href: '/game', title: 'Game' },
+  { href: 'https:/play.terratritium.com', title: 'Game' },
   { href: '/token', title: 'Token' },
   { href: '/community', title: 'Community' },
 ] as Array<Menu>
@@ -36,91 +36,79 @@ export const footerMenu = [
     items: [
       {
         title: 'Get Started',
-        href: '/get-started',
+        href: 'https://docs.terratritium.com/',
       },
       {
         title: 'The TRIT Token',
         href: '/token',
       },
       {
-        title: 'On-chain 2FA',
-        href: '/on-chain-2fa',
-      },
-      {
         title: 'Staking',
-        href: '/staking',
-      },
-      {
-        title: 'Sustainability',
-        href: '/sustainability',
-        icon: 'arrowUpRight',
-      },
-      {
-        title: 'Team',
-        href: '/team',
+        href: 'https://docs.terratritium.com/',
       },
     ],
   },
-  {
-    title: 'Builders',
-    items: [
-      {
-        title: 'Start Building',
-        href: '/start-building',
-      },
-      {
-        title: 'Fundamentals',
-        href: '/fundamentals',
-        daysLeft: 23,
-      },
-      {
-        title: 'Migration Guide',
-        href: '/migration-guide',
-        daysLeft: 23,
-      },
-      {
-        title: 'Technology',
-        href: '/technology',
-        icon: 'arrowUpRight',
-      },
-      {
-        title: 'Become a Validator',
-        href: '/become-a-validator',
-        icon: 'arrowUpRight',
-      },
-      {
-        title: 'Hackathons',
-        href: '/hackathons',
-        daysLeft: 23,
-      },
-      {
-        title: 'Releases',
-        href: '/releases',
-      },
-    ],
-  },
+  // {
+  //   title: 'Builders',
+  //   items: [
+  //     {
+  //       title: 'Start Building',
+  //       href: '/start-building',
+  //     },
+  //     {
+  //       title: 'Fundamentals',
+  //       href: '/fundamentals',
+  //       daysLeft: 23,
+  //     },
+  //     {
+  //       title: 'Migration Guide',
+  //       href: '/migration-guide',
+  //       daysLeft: 23,
+  //     },
+  //     {
+  //       title: 'Technology',
+  //       href: '/technology',
+  //       icon: 'arrowUpRight',
+  //     },
+  //     {
+  //       title: 'Become a Validator',
+  //       href: '/become-a-validator',
+  //       icon: 'arrowUpRight',
+  //     },
+  //     {
+  //       title: 'Hackathons',
+  //       href: '/hackathons',
+  //       daysLeft: 23,
+  //     },
+  //     {
+  //       title: 'Releases',
+  //       href: '/releases',
+  //     },
+  //   ],
+  // },
   {
     title: 'Ecosystem',
     items: [
       {
-        title: 'Discover',
-        href: '/discover',
+        title: 'Validators',
+        href: 'https://validator.info/terra-classic/terravaloper1ldvm3meszks6glyjwdnwt4re8faxzgalu4gh9j',
       },
       {
-        title: 'Projects',
-        href: '/projects',
+        title: 'Bridge',
+        href: 'https://bridge.terratritium.com/',
+      },
+      {
+        title: 'Rocket',
+        href: 'https://rocket.terratritium.com/',
+      },
+      {
+        title: 'NFT',
+        href: 'https://miata.io/creators/32/collection/99',
       },
       {
         title: 'Partners',
-        href: '/partners',
-      },
-      {
-        title: 'Validators',
-        href: '/validators',
-      },
-      {
-        title: 'Service Providers',
-        href: '/service-providers',
+        href: '/',
+        daysLeft: 9999,
       },
     ],
   },
@@ -128,26 +116,22 @@ export const footerMenu = [
     title: 'Community',
     items: [
       {
-        title: 'Events Calendar',
-        href: '/events-calendar',
-      },
-      {
         title: 'Governance',
-        href: '/governance',
+        href: 'https://discord.gg/wNcPr8ya',
         icon: 'arrowUpRight',
       },
       {
         title: 'Ambassadors Program',
-        href: '/ambassadors-program',
-        daysLeft: 23,
+        href: '/',
+        daysLeft: 9999,
       },
       {
         title: 'FAQ',
-        href: '/faq',
+        href: 'https://docs.terratritium.com/intro',
       },
       {
         title: 'Blog',
-        href: '/blog',
+        href: 'https://t.me/terratritium',
       },
     ],
   },
@@ -156,17 +140,12 @@ export const footerMenu = [
     items: [
       {
         title: 'Whitepaper',
-        href: '/whitepaper',
-        icon: 'newspaper',
-      },
-      {
-        title: 'Economics Paper',
-        href: '/economics-paper',
+        href: '/_static/TerraTritiumWhitepaper.pdf',
         icon: 'newspaper',
       },
       {
         title: 'Token Metrics',
-        href: '/token-metrics',
+        href: '/token',
         icon: 'newspaper',
       },
     ],
@@ -175,13 +154,17 @@ export const footerMenu = [
     title: 'About',
     items: [
       {
-        title: 'Media Kit',
-        href: '/media-kit',
+        title: 'Documentation',
+        href: 'https://docs.terratritium.com/intro',
         icon: 'arrowUpRight',
       },
       {
-        title: 'Careers',
+        title: 'Contracts',
         href: '/careers',
+      },
+      {
+        title: 'Contact us',
+        href: 'mail.to:terratritium@terratritium.com',
       },
     ],
   },
