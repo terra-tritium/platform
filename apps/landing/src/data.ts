@@ -2,7 +2,7 @@ import type { Menu, Social } from '@/type'
 
 export const mainMenu = [
   { href: '/', title: 'Home' },
-  { href: 'https:/play.terratritium.com', title: 'Game' },
+  { href: 'https://play.terratritium.com', title: 'Game' },
   { href: '/token', title: 'Token' },
   { href: '/community', title: 'Community' },
 ] as Array<Menu>
