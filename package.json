@@ -15,7 +15,8 @@
   },
   "devDependencies": {
     "@terratritium/typescript-config": "workspace:~",
-    "@biomejs/biome": "~1.8.2"
+    "@biomejs/biome": "~1.8.2",
+    "@tanstack/query-core": "~5.45.0"
   },
   "engines": {
     "node": ">=18"
