@@ -5,7 +5,6 @@
   "private": true,
   "license": "COPYRIGHT",
   "scripts": {
-    "preinstall": "npm install -g yarn && yarn install",
     "clean": "bunx rimraf ./{.next,.turbo}",
     "dev": "next dev",
     "lint": "next lint",
