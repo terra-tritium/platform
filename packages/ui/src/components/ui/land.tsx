@@ -3,7 +3,6 @@ import Image from 'next/image'
 import { cn } from '../../lib/utils'
 // import { Sprite } from './sprite'
 import HillLeft from '../../static/img/land/hill-left.svg'
-import Ship from '../../static/img/land/ship.png'
 import ShipShadow from '../../static/img/land/ship-shadow.svg'
 import StoneLeft from '../../static/img/land/stone-left.svg'
 import TritiumLeft from '../../static/img/land/tritium-left.svg'
@@ -50,7 +49,7 @@ export default function Land({ className }: LandProps): JSX.Element {
       <Image
         alt='Ship'
         className='absolute -top-56 left-1/2 max-xl:hidden -translate-x-1/2'
-        src={Ship}
+        src='/_static/img/ship.png'
         width={320}
         height={240}
       />
