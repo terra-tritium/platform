@@ -15,9 +15,6 @@ importers:
       '@biomejs/biome':
         specifier: ~1.8.2
         version: 1.8.2
-      '@tanstack/query-core':
-        specifier: ~5.45.0
-        version: 5.45.0
       '@terratritium/typescript-config':
         specifier: workspace:~
         version: link:tooling/typescript-config
@@ -1975,6 +1972,7 @@ packages:
 
   /@tanstack/query-core@5.45.0:
     resolution: {integrity: sha512-RVfIZQmFUTdjhSAAblvueimfngYyfN6HlwaJUPK71PKd7yi43Vs1S/rdimmZedPWX/WGppcq/U1HOj7O7FwYxw==}
+    dev: false
 
   /@tanstack/query-devtools@5.37.1:
     resolution: {integrity: sha512-XcG4IIHIv0YQKrexTqo2zogQWR1Sz672tX2KsfE9kzB+9zhx44vRKH5si4WDILE1PIWQpStFs/NnrDQrBAUQpg==}
