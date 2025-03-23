@@ -49,7 +49,7 @@ export default function Land({ className }: LandProps): JSX.Element {
       <Image
         alt='Ship'
         className='absolute -top-56 left-1/2 max-xl:hidden -translate-x-1/2'
-        src='/_static/img/ship.png'
+        src='https://terratritium.com/_static/img/ship.png'
         width={320}
         height={240}
       />
