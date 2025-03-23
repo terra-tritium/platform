@@ -8,6 +8,7 @@
     "clean": "bunx rimraf ./{.next,.turbo}",
     "dev": "next dev",
     "lint": "next lint",
+    "export": "next export",
     "build": "next build",
     "start": "next start"
   },

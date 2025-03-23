@@ -6,6 +6,7 @@
     "clean": "turbo clean",
     "lint": "trunk check",
     "format": "trunk fmt",
+    "export": "turbo export",
     "dev": "turbo dev",
     "build": "turbo build",
     "start": "turbo start"
