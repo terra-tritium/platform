@@ -37,7 +37,7 @@
     "typescript": "~5.5.2"
   },
   "engines": {
-    "node": "18.17.0"
-  },
-  "workspaces": ["../*", "../../packages/*", "../../services/*", "../../tooling/*"]
+    "node": "18.17.0",
+    "packageManager": "pnpm@8.15.1"
+  }
 }
