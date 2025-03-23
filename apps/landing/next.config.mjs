@@ -3,6 +3,7 @@
  */
 const nextConfig = {
   transpilePackages: ['@terratritium/ui'],
+  output: 'standalone'
 }
 
 export default nextConfig
