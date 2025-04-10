@@ -1,4 +1,23 @@
-import type { JSX } from 'react'
+import { JSX } from 'react'
+
+const response = await fetch('https://terra-classic-lcd.publicnode.com/cosmwasm/wasm/v1/contract/terra1g6fm3yu79gv0rc8067n2nnfpf0vks6n0wpzaf4u7w48tdrmj98zsy7uu00/smart/eyJ0b2tlbl9pbmZvIjp7fX0=');
+
+var supply = 0;
+var circulationSupply = 0;
+
+if (response.ok) {
+  const data = await response.json();
+  const initialSupply = 495000000;
+  const initialCirculateSupply = 136600000;
+
+  const totalSupply = data.data.total_supply / 1000000;
+  supply = totalSupply;
+
+  const circulatingSupply = initialCirculateSupply - (initialSupply - totalSupply);
+  circulationSupply = circulatingSupply;
+} else {
+  throw new Error('API call error');
+}
 
 export default function TokenPage(): JSX.Element {
   return (
@@ -16,7 +35,7 @@ export default function TokenPage(): JSX.Element {
 
         <div className='flex items-center space-x-4 lg:space-x-16 sm:space-x-8'>
           <div className='space-y-2'>
-            <p className='font-bold text-4xl xl:text-6xl'>481,435,699</p>
+            <p className='font-bold text-4xl xl:text-6xl'>{supply.toLocaleString("en-EN", { maximumFractionDigits: 0 })}</p>
 
             <p className='text-muted-foreground lg:text-xl'>Total Supply</p>
           </div>
@@ -98,7 +117,7 @@ export default function TokenPage(): JSX.Element {
           </svg>
 
           <div className='space-y-2'>
-            <p className='font-bold text-4xl xl:text-6xl'>108,593,579</p>
+            <p className='font-bold text-4xl xl:text-6xl'>{circulationSupply.toLocaleString("en-EN", { maximumFractionDigits: 0 })}</p>
 
             <p className='text-muted-foreground lg:text-xl'>
               Circulating Supply
@@ -107,9 +126,11 @@ export default function TokenPage(): JSX.Element {
         </div>
       </div>
 
-      <h2>Tritium Token ($TRIT)</h2>
+      <br/>
+      <h2><b>Tritium Token ($TRIT)</b></h2>
+      <br/>
 
-      <p>
+      <p style={{opacity: "0.5"}}>
         Tritium ($TRIT) is the official in-game currency of Terra Tritium,
         designed to power the entire game ecosystem. Players can earn, trade,
         and spend $TRIT within the game for purchasing resources, upgrading
@@ -118,7 +139,9 @@ export default function TokenPage(): JSX.Element {
         creating a dynamic economy driven by user engagement and strategy.
       </p>
 
-      <p>
+      <br/>
+
+      <p style={{opacity: "0.5"}}>
         Beyond its role in-game, $TRIT can also be traded on external platforms
         like Coinhall, allowing players to explore further trading opportunities
         and investment strategies. The value of $TRIT evolves with the
@@ -126,9 +149,13 @@ export default function TokenPage(): JSX.Element {
         movements.
       </p>
 
-      <h2>$TRIT usage in Tritium Bridge</h2>
+      <br/>
 
-      <p>
+      <h2><b>$TRIT usage in Tritium Bridge</b></h2>
+
+      <br/>
+
+      <p style={{opacity: "0.5"}}>
         The Tritium Bridge is a dedicated platform that enables the easy and
         secure transfer of $TRIT between Terra Tritium and external wallets or
         exchanges. It allows users to seamlessly move tokens between in-game
@@ -136,7 +163,9 @@ export default function TokenPage(): JSX.Element {
         interconnected with the larger blockchain ecosystem.
       </p>
 
-      <p>
+      <br/>
+
+      <p style={{opacity: "0.5"}}>
         Whether you're looking to stake your tokens, transfer them for trading,
         or reinvest in the game, the Tritium Bridge offers a smooth and
         efficient pathway. With its user-friendly interface and strong security
